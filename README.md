@@ -1,11 +1,11 @@
 # 🚢 Ship Alarm Server
 
-FastAPI-бэкенд для системы мониторинга и тревог главного двигателя судна.  
-Проект имитирует работу CAMClient (как у Praxis) и предоставляет WebSocket + REST API для клиентского приложения (например, Flutter).
+A FastAPI-based backend for a real-time ship engine monitoring and alarm system.  
+This project emulates engine parameters and provides WebSocket and REST APIs for client applications (e.g., Flutter).
 
 ---
 
-## 🔧 Стек
+## ⚙️ Tech Stack
 
 - Python 3.13
 - FastAPI
@@ -13,8 +13,7 @@ FastAPI-бэкенд для системы мониторинга и трево�
 - Pydantic v2
 - Starlette
 - AsyncIO
-- Симуляция параметров двигателя (random)
 
 ---
 
-## 📁 Структура проекта
+## 📁 Project Structure
