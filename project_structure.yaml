@@ -1,0 +1,30 @@
+project: ship_alarm_server
+description: FastAPI backend for ship engine monitoring and alarm control
+language: Python 3.13
+framework: FastAPI
+
+structure:
+  - path: app/
+    files:
+      - __init__.py
+      - main.py          # Entry point with WebSocket and REST routes
+      - engine.py        # Engine parameter generator
+      - alarms.py        # Alarm checking and creation
+      - users.py         # User (operator) management
+      - models.py        # Pydantic models: EngineData, Alarm, User
+  - requirements.txt     # Frozen dependencies
+  - README.md            # Project documentation
+  - .gitignore           # Ignored files
+  - venv/                # Virtual environment (not committed)
+
+run:
+  setup:
+    - python3.13 -m venv venv
+    - source venv/bin/activate
+    - pip install -r requirements.txt
+  dev:
+    - uvicorn app.main:app --reload
+  docs:
+    - http://127.0.0.1:8000/docs
+  websocket:
+    - ws://127.0.0.1:8000/ws/engine
